@@ -4,8 +4,14 @@ import {styles} from '../theme/appTheme';
 
 export const CalculadoraScreen = () => {
   return (
-    <View>
-      <Text style={styles.texto}>CalculadoraScreen</Text>
+    <View style={styles.calculadoraContainer}>
+      <Text style={styles.resultado}>1,500.000</Text>
+      <Text style={styles.resultadoPequeno}>1,500.000</Text>
+      <View>
+        <View style={styles.boton}>
+          <Text style={styles.botonTexto}>1</Text>
+        </View>
+      </View>
     </View>
   );
 };
