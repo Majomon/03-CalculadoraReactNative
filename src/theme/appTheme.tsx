@@ -20,18 +20,31 @@ export const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'right',
   },
+  fila: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginBottom: 18,
+    paddingHorizontal: 10,
+  },
   boton: {
     width: 80,
     height: 80,
-    backgroundColor: '#9B9B9B',
     borderRadius: 100,
     justifyContent: 'center',
+    marginHorizontal: 10,
+    backgroundColor: '#2D2D2D',
+  },
+  botonNaranja: {
+    backgroundColor: '#FF9427',
+  },
+  botonGrisClaro: {
+    backgroundColor: '#9B9B9B',
   },
   botonTexto: {
     textAlign: 'center',
     padding: 10,
     fontSize: 30,
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
   },
 });
