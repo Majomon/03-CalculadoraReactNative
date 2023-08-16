@@ -6,11 +6,17 @@ interface Props {
   text: string;
   color?: string;
   ancho?: boolean;
+  accion?: () => void;
 }
 
-export const BotonCalc = ({text, color = '#2D2D2D', ancho = false}: Props) => {
+export const BotonCalc = ({
+  text,
+  color = '#2D2D2D',
+  ancho = false,
+  accion,
+}: Props) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={accion}>
       <View
         style={{
           ...styles.boton,
