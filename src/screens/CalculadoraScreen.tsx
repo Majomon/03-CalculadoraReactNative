@@ -44,6 +44,22 @@ export const CalculadoraScreen = () => {
     }
   };
 
+  const btnDelete = () => {
+    let negativo = '';
+    let numTemporal = numero;
+
+    if (numero.includes('-')) {
+      negativo = '-';
+      numTemporal = numero.substring(1); // Le quito la primera posición
+    }
+
+    if (numTemporal.length === 1) {
+      setNumero('0');
+    } else {
+      setNumero(negativo + numTemporal.slice(0, -1));
+    }
+  };
+
   return (
     <View style={styles.calculadoraContainer}>
       <Text style={styles.resultadoPequeno}>{numeroAnterior}</Text>
@@ -54,7 +70,7 @@ export const CalculadoraScreen = () => {
       <View style={styles.fila}>
         <BotonCalc text="C" color="#9B9B9B" accion={clean} />
         <BotonCalc text="+/-" color="#9B9B9B" accion={positivoNegativo} />
-        <BotonCalc text="del" color="#9B9B9B" accion={clean} />
+        <BotonCalc text="del" color="#9B9B9B" accion={btnDelete} />
         <BotonCalc text="/" color="#FF9427" accion={clean} />
       </View>
       <View style={styles.fila}>
